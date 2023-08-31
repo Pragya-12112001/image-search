@@ -130,12 +130,15 @@ a:hover{
   grid-row-start: 1;
   grid-column-start: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: end;
   font-size: 1.2rem;
   z-index: 1;
-  margin: .5rem 1rem;
+  margin: 0.5rem 1rem;
   visibility: hidden;
+  flex-direction: column-reverse;
+  align-content: flex-end;
+  flex-wrap: nowrap;
 }
 .search-item:hover .icons{
   visibility: visible;
