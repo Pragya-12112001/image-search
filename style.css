@@ -168,6 +168,9 @@ a:hover{
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
   }
+  form{
+    width: 90vw;
+  }
 }
 
 .expanded{
