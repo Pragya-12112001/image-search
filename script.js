@@ -47,21 +47,20 @@ const searchImg= async()=>{
       expanded_image.classList.add('expanded-img');
       expanded_image.src=result.urls.full;
       const cross=document.createElement('i');
-      cross.classList.add("fa-xmark", "fa-solid");
+      cross.classList.add("fa-xmark", "fa-solid", "expand");
       
       expanded.appendChild(expanded_image);
       expanded.appendChild(cross);
       imageWrapper.appendChild(expanded); 
 
 
-      const cancle= document.querySelector('.fa-xmark');
+      const cancle= document.querySelector('.expand');
       cancle.addEventListener('click', ()=>{
         expanded.remove('div');
         console.log('as')
       })
       
     })
-
     
     icons.appendChild(heart);
     icons.appendChild(plus);
