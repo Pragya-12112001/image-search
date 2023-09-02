@@ -4,7 +4,8 @@ const searchInput= document.getElementById('search-input');
 const searchResultsEl= document.getElementById('results');
 const showMore= document.getElementById('show-more'); 
 
-let inputData='';
+
+let inputData=''; 
 let page=1; 
 const searchImg= async()=>{
   inputData= searchInput.value;
@@ -69,10 +70,6 @@ const searchImg= async()=>{
     imageWrapper.appendChild(description); 
     imageWrapper.appendChild(icons); 
     searchResultsEl.appendChild(imageWrapper);
-    
-    // image.addEventListener('click',()=>{
-    //   window.open(result.urls.full);
-    // })
 
     heart.addEventListener('click',()=>{
       if (heart.style.color!=="red") {
@@ -89,12 +86,17 @@ const searchImg= async()=>{
       }
     })
 
+    imageWrapper.addEventListener('dblclick',()=>{
+      const like_div= document.createElement('div');
+      like_div.classList.add("heart-on-click");
+      const like=document.createElement('i');
+      like.classList.add("fa-heart", "fa-solid");
 
+      heart.style.color="red";
 
-
- 
-
-  
+      like_div.appendChild(like);
+      imageWrapper.appendChild(like_div);
+    })  
   });
   page++;
   console.log('page no: '+page);
@@ -114,3 +116,13 @@ showMore.addEventListener('click', ()=>{
   searchImg();
 })
 
+const clear_form=document.querySelector('.clear');
+clear_form.addEventListener('click',()=>{
+  searchInput.value='';
+});
+
+
+
+// bootstrap tooltip
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
