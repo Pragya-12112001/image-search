@@ -194,7 +194,7 @@ a:hover{
   grid-column-start: 1;
   height: 100vh;
   max-width: 100vw;
-  object-fit: cover;  
+  object-fit: contain;  
   /* cursor: zoom-in; */
 }
 
