@@ -165,9 +165,6 @@ a:hover{
   .search-item a{
     visibility: visible;
     font-size: 1.3rem;
-    background-color: transparent;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
   }
   form{
     width: 90vw;
